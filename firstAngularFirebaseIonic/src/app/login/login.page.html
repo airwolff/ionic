@@ -23,6 +23,9 @@
                                 <ion-input type="text" formControlName="email">
                                 </ion-input>
                             </ion-item>
+                            <div>
+                                {{formError.email}}
+                            </div>
                             <ion-item>
                                 <ion-label position="floating">
                                     Password
@@ -30,7 +33,10 @@
                                 <ion-input type="password" formControlName="password">
                                 </ion-input>
                             </ion-item>
-                            <ion-button expand="block" class="button ion-margin-top login-button"  [disabled]="loginForm.invalid">
+                            <div>
+                                {{formError.password}}
+                            </div>
+                            <ion-button expand="block" class="button ion-margin-top login-button" [disabled]="loginForm.invalid">
                                 Login
                             </ion-button>
                         </form>
